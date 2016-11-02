@@ -11,14 +11,15 @@
     <packaging>jar</packaging>
 
     <properties>
-        <spring.boot.beelt>1.0.0</spring.boot.beelt>
+        <spring.boot.beelt.version>1.0.0</spring.boot.beelt.version>
     </properties>
 
     <dependencies>
+        <!--beetl的自动配置-->
         <dependency>
             <groupId>com.github.broncho.springboot</groupId>
             <artifactId>spring-boot-beetl</artifactId>
-            <version>${spring.boot.beelt}</version>
+            <version>${spring.boot.beelt.version}</version>
         </dependency>
     </dependencies>
 </project>

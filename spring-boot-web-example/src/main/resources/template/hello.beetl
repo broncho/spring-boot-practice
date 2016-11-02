@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot</title>
+</head>
+<body>
+<h1>Hi ${name}, I am a Spring Boot Web Application render by beetl</h1>
+<h3>${strutil.formatDate(date(), "yyyy-MM-dd HH:mm:ss") }</h3>
+</body>
+</html>

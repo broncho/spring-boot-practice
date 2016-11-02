@@ -17,8 +17,6 @@ public class BeetlAutoConfiguration {
     
     @Bean
     public GroupTemplate groupTemplate(BeetlProperties beetlProperties) {
-        GroupTemplate groupTemplate = new GroupTemplate();
-        groupTemplate.setConf(beetlProperties);
-        return groupTemplate;
+        return new GroupTemplate(beetlProperties);
     }
 }
