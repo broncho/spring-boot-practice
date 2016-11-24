@@ -11,6 +11,13 @@
     <packaging>jar</packaging>
 
     <properties>
+        <encoding>UTF-8</encoding>
+        <java.version>1.7</java.version>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+
         <spring.boot.beelt.version>1.0.0</spring.boot.beelt.version>
     </properties>
 
@@ -22,4 +29,30 @@
             <version>${spring.boot.beelt.version}</version>
         </dependency>
     </dependencies>
+
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <target>${java.version}</target>
+                    <source>${java.version}</source>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                    <encoding>${encoding}</encoding>
+                    <useIncrementalCompilation>false</useIncrementalCompilation>
+                    <fork>true</fork>
+                    <compilerArgs>
+                        <arg>-Xlint:none</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
 </project>
