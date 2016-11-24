@@ -1,5 +1,7 @@
 package com.github.broncho.springboot.cuc;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -10,6 +12,8 @@ import org.springframework.context.ConfigurableApplicationContext;
  */
 @SpringBootApplication
 public class CucApplication {
+    
+    private static final Logger LOGGER = LoggerFactory.getLogger(CucApplication.class);
     
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(CucApplication.class);
@@ -22,8 +26,10 @@ public class CucApplication {
                 2999991233L,
                 9999223333L
         };
+        LOGGER.info("---Cuc Start---");
         for (long v : value) {
-            System.out.println("Original=" + v + " Dest=" + conversion.cuc(v));
+            LOGGER.info("Original = {}  Dest = {} ", v, conversion.cuc(v));
         }
+        LOGGER.info("---Cuc End---");
     }
 }
