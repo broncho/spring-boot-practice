@@ -17,3 +17,7 @@
 ### 开发基于starter契约的组件
 
 + spring-boot-starter-cuc : 大数字转化为人类可读的描述
+
+### Spring 资讯
+
++ [Spring Boot wins JAX Innovation Award for 2016](https://spring.io/blog/2016/10/11/spring-boot-wins-jax-innovation-award-for-2016)
